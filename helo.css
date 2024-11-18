@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+}
+
+.digital-clock {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #3a3a3a, #505050);
+    padding: 3vw;
+    border-radius: 2vw;
+    box-shadow: 
+        inset 2px 2px 6px rgba(0, 0, 0, 0.3),
+        6px 6px 15px rgba(0, 0, 0, 0.5), 
+        -6px -6px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.digital-clock:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        inset 2px 2px 10px rgba(0, 0, 0, 0.5),
+        10px 10px 25px rgba(0, 0, 0, 0.6), 
+        -10px -10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+span {
+    display: inline-block;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    background: linear-gradient(145deg, #3a3a3a, #4d4d4d);
+    box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 4vw;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#seconds {
+    color: #f39c12;
+    background: linear-gradient(145deg, #6a5a1a, #f39c12);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+        2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#dots {
+    padding: 0 0.5vw; 
+    font-size: 1.5em; 
+}
+
+#period {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #bdc3c7;
+}
+
+span:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 5px 10px rgba(0, 0, 0, 0.5), 
+        -2px -2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .digital-clock {
+        font-size: 6vw;
+        border-radius: 3vw;
+    }
+    .time {
+        gap: 3vw;
+    }
+    span {
+        min-width: 5vw;
+        padding: 1.5vw 2.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-clock {
+        font-size: 7vw;
+        padding: 5vw;
+    }
+    span {
+        min-width: 7vw;
+    }
+}
